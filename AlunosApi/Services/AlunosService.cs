@@ -34,7 +34,7 @@ namespace AlunosApi.Services
             {
                 if(!string.IsNullOrEmpty(nome))
                 {
-                return await _context.Alunos.Where(x => x.Name.Contains(nome)).ToListAsync();//retornar IEnumerable<Aluno>
+                return await _context.Alunos.Where(x => x.Nome.Contains(nome)).ToListAsync();//retornar IEnumerable<Aluno>
                 }
                 else
                 {
