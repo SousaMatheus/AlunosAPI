@@ -47,7 +47,12 @@ namespace AlunosApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AlunosApi v1"));
             }
-
+            app.UseCors(options =>//permite que o front end envie solicitações para um domínio diferente daquele que serviu a página da Web
+            {
+                options.WithOrigins("http://localhost:3000");
+                options.AllowAnyHeader();
+                options.AllowAnyMethod();
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();//utilizado no controller 
