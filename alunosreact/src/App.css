@@ -1,0 +1,37 @@
+.aluno-container{
+  width: 100%;
+  max-width: 1200px;
+  padding: 5 10px;
+  margin: 30px auto;
+}
+
+.aluno-container header {
+  display: flex;
+  align-items: center;
+}
+
+.aluno-container head img{
+  height: 50px;
+}
+
+.aluno-container header button{
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #DCDCE6;
+  background-color: green;
+  margin-left:  10px;
+  transition: border-color 0.5s;
+}
+
+.aluno-container header button:hover {
+  border-color: #510bac;
+}
+
+table, th, td {
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  text-align: left;
+}
