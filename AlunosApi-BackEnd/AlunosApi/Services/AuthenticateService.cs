@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlunosApi.Services
 {
-    public class AuthenticateService : IAuthenticate
+    public class AuthenticateService : IAuthenticateService
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
@@ -23,7 +23,7 @@ namespace AlunosApi.Services
             //verifica se credenciais sao validas na tabela do Identity, se vai persistir cookies
             //no login  e se vai bloquear o usuario caso haja falha no login
 
-            return result.Succeeded;//retorna true or false
+            return result.Succeeded;
         }
 
         public async Task Logout()
